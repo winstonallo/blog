@@ -6,11 +6,11 @@ lastUpdated: 2024-07-28
 tags:
     - System Programming
     - Rust
-excerpt: Continuing to improve our k3s cluster and especially the CI/CD workflow, we now take a look at the GitOps tool called Argo CD, and how we can integrate it into our cluster. Our tech stack for deployment uses these services&#58; k3s, Helm, Cilium & after this tutorial Argo CD as well
+excerpt: ""
 authors:
     - winstonallo
 cover:
-  alt: A beautiful cover image with the text "Argo CD"
+  alt: A ferris crab standing on a pile of bodies waving a flag saying "Rewrite it in Rust!"
   image: ../../../../public/blog/rewrite-it-in-rust.jpg
 ---
 

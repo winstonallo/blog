@@ -10,5 +10,4 @@ export const collections = {
       extend: (context) => blogSchema(context),
     }),
   }),
-  i18n: defineCollection({ loader: i18nLoader(), schema: i18nSchema() }),
 };

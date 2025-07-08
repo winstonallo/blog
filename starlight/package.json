@@ -7,9 +7,7 @@
     "build": "astro build",
     "dev": "astro dev --port 4322",
     "preview": "astro preview --port 4322",
-    "start": "astro dev --port 4322",
-    "lunaria:build": "lunaria build",
-    "lunaria:preview": "lunaria preview"
+    "start": "astro dev --port 4322"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.4",
@@ -17,8 +15,6 @@
     "@expressive-code/plugin-collapsible-sections": "^0.41.2",
     "@expressive-code/plugin-line-numbers": "^0.41.2",
     "@fontsource-variable/roboto-mono": "^5.2.6",
-    "@lunariajs/core": "^0.1.1",
-    "@lunariajs/starlight": "^0.1.1",
     "astro": "^5.8.1",
     "sharp": "^0.34.2",
     "starlight-blog": "^0.24.0",

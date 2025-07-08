@@ -1,33 +1,16 @@
-# Deep Thoughts in my blog
+# blog
 
 [![Built with Starlight](https://astro.badg.es/v2/built-with-starlight/tiny.svg)](https://starlight.astro.build)
-[![Netlify Status](https://api.netlify.com/api/v1/badges/fd887bd4-d5e4-428b-9fdd-f19d8feee43d/deploy-status)](https://app.netlify.com/sites/trueberryless-blog/deploys)
-
-[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/L4L3QTFWA)
 
 ## Installation
-
-Please install [PnPm](https://pnpm.io/) beforehand.
-
-To get started, clone the repo with this command:
-
-```
-git clone https://github.com/trueberryless-org/blog
-```
-
-Go into the starlight folder.
 
 ```
 cd ./starlight/
 ```
 
-Run
-
 ```
 pnpm install
 ```
-
-to install all packages found in package.json / all necessary packages.
 
 ## Workflow
 
@@ -47,12 +30,6 @@ pnpm run preview
 ```
 
 in order to run the project in build mode not in dev mode.
-
-## Cover Images
-
-All cover images are generated with the [Release Image Generator](https://github.com/trueberryless-org/release-image-generator).
-
-Here is an example URL: https://release-image-generator.trueberryless.org/?text=Blog&width=960&height=480
 
 ## Contribution
 

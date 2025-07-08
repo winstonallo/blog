@@ -1,6 +1,10 @@
+main {
+  font-family: 'Roboto Mono Variable', monospace;
+}
+
 :root {
   --starlight-image-zoom-backdrop-bg: none;
-  --sl-font: "Atkinson Hyperlegible Next Variable", system-ui, sans-serif;
+  --sl-font: "Roboto Mono Variable", system-ui, monospace;
 }
 
 .hero-html {
@@ -12,15 +16,15 @@
 }
 
 :is(h1, h2, h3, h4, h5, h6) {
-  font-family: "Atkinson Hyperlegible Next Variable", system-ui, sans-serif;
+  font-family: "Roboto Mono Variable", system-ui, monospace;
 }
 
 .content-panel :is(p, ul) {
-  font-family: "Atkinson Hyperlegible Next Variable", system-ui, sans-serif;
+  font-family: "Roboto Mono Variable", system-ui, monospace;
 }
 
 :is(code, code *) {
-  font-family: "JetBrains Mono Variable", sans-serif !important;
+  font-family: "Roboto Mono Variable", system-ui, monospace !important;
 }
 
 dialog::backdrop {

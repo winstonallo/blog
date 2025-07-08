@@ -6,63 +6,51 @@ import starlightCoolerCredit from "starlight-cooler-credit";
 import starlightImageZoom from "starlight-image-zoom";
 import starlightLinksValidator from "starlight-links-validator";
 import starlightThemeRapide from "starlight-theme-rapide";
+import "@fontsource-variable/roboto-mono";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://blog.trueberryless.org",
+  site: "https://winstonallo.sh",
   integrations: [
     starlight({
       title: "Blog",
+      customCss: [
+        "./src/styles/custom.css",
+        "@fontsource-variable/roboto-mono/wght.css",
+      ],
       social: [
         {
-          icon: "blueSky",
-          label: "BlueSky",
-          href: "https://bsky.app/profile/trueberryless.org",
-        },
-        {
-          icon: "mastodon",
-          label: "Mastodon",
-          href: "https://mastodon.social/@trueberryless",
+          icon: "linkedin",
+          label: "LinkedIn",
+          href: "https://linkedin.com/in/arthur-bied-charreton",
         },
         {
           icon: "github",
           label: "GitHub",
-          href: "https://github.com/trueberryless-org/blog",
+          href: "https://github.com/winstonallo",
         },
       ],
-      editLink: {
-        baseUrl:
-          "https://github.com/trueberryless-org/blog/tree/main/starlight/",
-      },
       defaultLocale: "root",
       locales: {
         root: {
           label: "English",
           lang: "en",
         },
-        fr: {
-          label: "French",
-          lang: "fr",
-        },
-        de: {
-          label: "Deutsch",
-          lang: "de",
-        },
       },
       lastUpdated: true,
-      logo: {
-        light: "./src/assets/light-logo.png",
-        dark: "./src/assets/dark-logo.png",
-        replacesTitle: true,
-      },
+      // logo: {
+      //   light: "./src/assets/light-logo.png",
+      //   dark: "./src/assets/dark-logo.png",
+      //   replacesTitle: true,
+      // },
       head: [
-        {
-          tag: "meta",
-          attrs: {
-            name: "fediverse:creator",
-            content: "@trueberryless@mastodon.social",
-          },
-        },
+        // {
+        //   tag: "meta",
+        //   attrs: {
+        //     name: "fediverse:creator",
+        //     content: "@trueberryless@mastodon.social",
+        //   },
+        // },
         {
           tag: "script",
           attrs: {
@@ -87,7 +75,7 @@ export default defineConfig({
           credit: "Starlight Blog",
         }),
         starlightBlog({
-          title: "Deep Thoughts",
+          title: "winstonallo.sh",
           recentPostCount: 3,
           prevNextLinksOrder: "chronological",
           navigation: "none",
@@ -96,31 +84,11 @@ export default defineConfig({
             words: "rounded",
           },
           authors: {
-            trueberryless: {
-              name: "Felix Schneider",
-              title: "trueberryless",
-              picture: "/trueberryless.png",
-              url: "https://trueberryless.org",
-            },
-            clemens: {
-              name: "Clemens Schlipfinger",
-              picture: "/clemens.png",
-              url: "https://www.linkedin.com/in/clemens-schlipfinger/",
-            },
-            hideoo: {
-              name: "HiDeoo",
-              picture: "/hideoo.png",
-              url: "https://hideoo.dev",
-            },
-            frostybee: {
-              name: "Frostybee",
-              picture: "/frostybee.png",
-              url: "https://github.com/frostybee",
-            },
-            ai: {
-              name: "Artificial Intelligence",
-              title: "Written with the help of AI",
-              picture: "/ai.jpg",
+            winstonallo: {
+              name: "Arthur Bied-Charreton",
+              title: "winstonallo",
+              url: "https://winstonallo.sh",
+              picture: "/ai.jpg"
             },
           },
         }),
@@ -131,11 +99,6 @@ export default defineConfig({
         Hero: "./src/components/Hero.astro",
         PageTitle: "./src/components/PageTitle.astro",
       },
-      customCss: [
-        "./src/styles/custom.css",
-        "@fontsource-variable/atkinson-hyperlegible-next/wght.css",
-        "@fontsource-variable/jetbrains-mono/wght.css",
-      ],
       pagination: false,
     }),
   ],

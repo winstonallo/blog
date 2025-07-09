@@ -53,9 +53,6 @@ importers:
       starlight-links-validator:
         specifier: ^0.14.2
         version: 0.14.3(@astrojs/starlight@0.34.3(astro@5.8.1(jiti@1.21.7)(rollup@4.40.1)(typescript@5.7.3)(yaml@2.7.1)))
-      starlight-theme-rapide:
-        specifier: ^0.5.1
-        version: 0.5.1(@astrojs/starlight@0.34.3(astro@5.8.1(jiti@1.21.7)(rollup@4.40.1)(typescript@5.7.3)(yaml@2.7.1)))
       typescript:
         specifier: ^5.5.4
         version: 5.7.3
@@ -2034,12 +2031,6 @@ packages:
     engines: {node: '>=18.17.1'}
     peerDependencies:
       '@astrojs/starlight': '>=0.15.0'
-
-  starlight-theme-rapide@0.5.1:
-    resolution: {integrity: sha512-QRF6mzcYHLEX5UpUvOPXVVwISS298siIJLcKextoMLhXcnF12nX+IYJ0LNxFk9XaPbX9uDXIieSBJf5Pztkteg==}
-    engines: {node: '>=18'}
-    peerDependencies:
-      '@astrojs/starlight': '>=0.34.0'
 
   stream-replace-string@2.0.0:
     resolution: {integrity: sha512-TlnjJ1C0QrmxRNrON00JvaFFlNh5TTG00APw23j74ET7gkQpTASi6/L2fuiav8pzK715HXtUeClpBTw2NPSn6w==}
@@ -5127,10 +5118,6 @@ snapshots:
       unist-util-visit: 5.0.0
     transitivePeerDependencies:
       - supports-color
-
-  starlight-theme-rapide@0.5.1(@astrojs/starlight@0.34.3(astro@5.8.1(jiti@1.21.7)(rollup@4.40.1)(typescript@5.7.3)(yaml@2.7.1))):
-    dependencies:
-      '@astrojs/starlight': 0.34.3(astro@5.8.1(jiti@1.21.7)(rollup@4.40.1)(typescript@5.7.3)(yaml@2.7.1))
 
   stream-replace-string@2.0.0: {}
 

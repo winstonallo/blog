@@ -5,7 +5,7 @@ import starlightBlog from "starlight-blog";
 import starlightCoolerCredit from "starlight-cooler-credit";
 import starlightImageZoom from "starlight-image-zoom";
 import starlightLinksValidator from "starlight-links-validator";
-import starlightThemeRapide from "starlight-theme-rapide";
+import starlightThemeRapide from "./src/starlight-theme-rapide";
 
 // https://astro.build/config
 export default defineConfig({

@@ -6,7 +6,7 @@ lastUpdated: 2024-07-28
 tags:
     - System Programming
     - Rust
-excerpt: ""
+excerpt: "This is a placeholder article to test my new blog's deployment"
 authors:
     - winstonallo
 cover:

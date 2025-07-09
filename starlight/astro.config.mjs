@@ -1,6 +1,5 @@
 import starlight from "@astrojs/starlight";
 import "@fontsource-variable/roboto-mono";
-import lunaria from "@lunariajs/starlight";
 import { defineConfig } from "astro/config";
 import starlightBlog from "starlight-blog";
 import starlightCoolerCredit from "starlight-cooler-credit";

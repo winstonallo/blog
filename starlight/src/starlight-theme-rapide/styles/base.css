@@ -47,7 +47,7 @@
     @media (prefers-reduced-transparency) {
       -webkit-backdrop-filter: initial;
       backdrop-filter: initial;
-      background-color: var(--sl-color-black);
+      background-color: var(--sl-color-gray-6);
     }
 
     @media (min-width: 50rem) {
@@ -63,7 +63,7 @@
 
       [data-theme='light'] & {
         background-color: var(--sl-color-white);
-        color: var(--sl-color-black);
+        color: var(--sl-color-gray-6);
       }
     }
 
@@ -77,7 +77,7 @@
    */
   site-search {
     dialog {
-      background-color: var(--sl-color-black);
+      background-color: var(--sl-color-gray-6);
       box-shadow: none;
       min-height: auto;
 
@@ -329,7 +329,7 @@
       @media (prefers-reduced-transparency) {
         -webkit-backdrop-filter: initial;
         backdrop-filter: initial;
-        background-color: var(--sl-color-black);
+        background-color: var(--sl-color-gray-6);
       }
 
       details summary {
@@ -339,7 +339,7 @@
       &:has(details[open]) {
         -webkit-backdrop-filter: initial;
         backdrop-filter: initial;
-        background-color: var(--sl-color-black);
+        background-color: var(--sl-color-gray-6);
       }
     }
 

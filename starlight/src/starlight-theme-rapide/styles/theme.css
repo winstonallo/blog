@@ -1,5 +1,4 @@
 @layer rapide {
-
   /**
    * Common
    */
@@ -26,14 +25,15 @@
   ::backdrop {
     --sl-color-white: oklch(90% 0.002 219);
 
-    --sl-color-gray-1: oklch(80% 0.005 var(--sch-hue-base));
+    --sl-color-gray-1: oklch(0.3533 0.0173 260.87);
     --sl-color-gray-2: oklch(75% 0.005 219);
     --sch-color-gray-3: oklch(65% 0.003 219);
     --sl-color-gray-4: oklch(48% 0.003 219);
-    --sl-color-gray-5: oklch(43.862% 0.00517 197.501);
-    --sl-color-gray-6: oklch(33.971% 0.00139 198.618);
-    --sl-color-gray-7: oklch(23.613% 0.00152 16.294);
-    --sl-color-black: oklch(64.036% 0.27526 328.204);
+    --sl-color-gray-5: oklch(0.3533 0.0173 260.87);
+    --sl-color-gray-6: oklch(0.3533 0.0173 260.87);
+    --sl-color-gray-7: oklch(0.3533 0.0173 260.87);
+    --sl-color-black: oklch(0.3 0.0173 258.75);
+    --sl-color-code-bg: oklch(0.2793 0.0109 285.67);
 
     --sl-color-orange-low: oklch(24% 0.01 var(--sl-hue-orange));
     --sl-color-orange: oklch(62% 0.115 var(--sl-hue-orange));
@@ -73,18 +73,19 @@
     --sl-color-red-alt: oklch(21.5% 0.018 var(--sl-hue-red));
     --sl-color-red-alt-invert: oklch(37% 0.03 var(--sl-hue-red));
 
-    --sl-hue-accent: 164;
+    --sl-hue-accent: 264;
     --sl-color-accent-low: oklch(19% 0.02 var(--sl-hue-accent));
     --sl-color-accent: oklch(50% 0.085 var(--sl-hue-accent));
     --sl-color-accent-high: oklch(61% 0.085 var(--sl-hue-accent));
 
+    --sl-color-bg-inline-code: oklch(0.6267 0.2722 355.1);
     --sl-color-bg-nav: var(--sl-color-gray-6);
     --sl-color-bg-sidebar: var(--sl-color-gray-6);
-    --sl-color-backdrop-overlay: oklch(32.109% 0.00004 271.152 / 0.7);
+    --sl-color-backdrop-overlay: oklch(0.3533 0.0173 260.87);
 
     --sl-rapide-ui-bg-color: oklch(37.909% 0.00004 271.152);
-    --sl-rapide-ui-header-bg-color: oklch(28.908% 0.00003 271.152 / 0.8);
-    --sl-rapide-ui-border-color: oklch(28% 0.004 219);
+    --sl-rapide-ui-header-bg-color: oklch(0.3333 0.0173 261.93);
+    --sl-rapide-ui-border-color: oklch(0.3333 0.0173 261.93);
 
     --sl-rapide-ec-marker-bg-color: oklch(44.226% 0.00005 271.152);
     --sl-rapide-ec-marker-border-color: oklch(47% 0.002 219);
@@ -93,8 +94,8 @@
   /**
    * Light mode
    */
-  :root[data-theme='light'],
-  [data-theme='light'] ::backdrop {
+  :root[data-theme="light"],
+  [data-theme="light"] ::backdrop {
     --sl-color-white: oklch(30% 0.015 219);
     --sl-color-gray-1: oklch(36% 0.018 219);
     --sl-color-gray-2: oklch(36% 0.018 219);
@@ -104,6 +105,7 @@
     --sl-color-gray-6: oklch(90% 0.004 219);
     --sl-color-gray-7: oklch(96% 0.003 219);
     --sl-color-black: oklch(98% 0.002 219);
+    --sl-color-code-bg: oklch(96% 0.003 219);
 
     --sl-color-orange-low: oklch(96% 0.02 var(--sl-hue-orange));
     --sl-color-orange: oklch(74% 0.15 var(--sl-hue-orange));
@@ -143,7 +145,7 @@
     --sl-color-red-alt: oklch(94% 0.02 var(--sl-hue-red));
     --sl-color-red-alt-invert: oklch(78% 0.04 var(--sl-hue-red));
 
-    --sl-hue-accent: 160;
+    --sl-hue-accent: 264;
     --sl-color-accent-low: oklch(96% 0.015 var(--sl-hue-accent));
     --sl-color-accent: oklch(53% 0.1197 var(--sl-hue-accent));
     --sl-color-accent-high: oklch(46% 0.104 var(--sl-hue-accent));

@@ -1,10 +1,12 @@
 import starlight from "@astrojs/starlight";
+import { astroExpressiveCode } from "@astrojs/starlight/expressive-code";
 import "@fontsource-variable/roboto-mono";
 import { defineConfig } from "astro/config";
 import starlightBlog from "starlight-blog";
 import starlightCoolerCredit from "starlight-cooler-credit";
 import starlightImageZoom from "starlight-image-zoom";
 import starlightLinksValidator from "starlight-links-validator";
+
 import starlightThemeRapide from "./src/starlight-theme-rapide";
 
 // https://astro.build/config
@@ -12,6 +14,12 @@ export default defineConfig({
   site: "https://winstonallo.sh",
   integrations: [
     starlight({
+      expressiveCode: {
+        themes: ["nord", "one-light"],
+        styleOverrides: {
+          codeBackground: "var(--sl-color-code-bg)",
+        },
+      },
       title: "Blog",
       customCss: [
         "./src/styles/custom.css",

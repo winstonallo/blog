@@ -1,6 +1,7 @@
 # blog
 
 [![Built with Starlight](https://astro.badg.es/v2/built-with-starlight/tiny.svg)](https://starlight.astro.build)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/2375f3dc-b02c-4182-b2fb-116e07fe3141/deploy-status)](https://app.netlify.com/projects/winstonallo/deploys)
 
 ## Installation
 
@@ -33,7 +34,7 @@ in order to run the project in build mode not in dev mode.
 
 ## Contribution
 
-If you wanna contribute to the blog website, just edit or create the Markdown files you wanna change and create a pull request.  
+If you wanna contribute to the blog website, just edit or create the Markdown files you wanna change and create a pull request.
 This can either be done directly on GitHub or locally by following the steps above. Good luck and thank you for helping improve the internet day by day!
 
 More information about contribution can be found unter [CONTRIBUTING.md](https://github.com/trueberryless-org/blog/blob/main/CONTRIBUTING.md).

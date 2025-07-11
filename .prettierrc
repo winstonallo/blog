@@ -12,6 +12,7 @@
       "options": {
         "parser": "astro"
       },
+      }
     {
       "files": "*.ts",
       "options": {

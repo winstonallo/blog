@@ -11,7 +11,19 @@
       "files": "*.astro",
       "options": {
         "parser": "astro"
+      },
+    {
+      "files": "*.ts",
+      "options": {
+        "importOrderParserPlugins": ["typescript", "decorators"]
       }
+    },
+    {
+      "files": "*.d.ts",
+      "options": {
+        "importOrderParserPlugins": ["[\"typescript\", { \"dts\": true }]", "decorators"]
+      }
+    }
     }
   ],
   "importOrder": [

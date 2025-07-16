@@ -26,7 +26,7 @@ fn main() -> std::io::Result<()> {
 }
 ```
 ## Test LateX support
-$X_i$
+
 $$
-|x,y| = \sqrt{x^2 + y^2}
+|x,y| = \sqrt{x^2+y^2}
 $$

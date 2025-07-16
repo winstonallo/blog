@@ -8,10 +8,16 @@ import starlightImageZoom from "starlight-image-zoom";
 import starlightLinksValidator from "starlight-links-validator";
 
 import starlightThemeRapide from "./src/starlight-theme-rapide";
+import remarkMath from "remark-math";
+import rehypeMathJax from "rehype-mathjax";
 
 // https://astro.build/config
 export default defineConfig({
   site: "https://winstonallo.sh",
+  markdown: {
+    remarkPlugins: [remarkMath],
+    rehypePlugins: [rehypeMathJax],
+  },
   integrations: [
     starlight({
       expressiveCode: {
@@ -24,6 +30,7 @@ export default defineConfig({
       customCss: [
         "./src/styles/custom.css",
         "@fontsource-variable/roboto-mono/wght.css",
+        "./src/styles/mathjax.css"
       ],
       social: [
         {

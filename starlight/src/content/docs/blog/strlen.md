@@ -45,7 +45,7 @@ Text is nothing but an array of bytes. If you want to access text, simply store 
 
 In the early days of Unix development, there were two popular solutions to this problem:
 1. Using a _leading byte_ to store the length of the string. This allowed the string to contain any data, but limited its length to 255 bytes. This is known as a _length-prefixed string_.
-2. Marking the end of the string with a null-byte (`0`). This poses no limitations on the length of the string, but reserves `0` as a delimiter.
+2. Marking the end of the string with a null-byte (the value $0$). This poses no limitations on the length of the string, but reserves `\0` as a delimiter.
 
 A solution that immediately comes to mind would be to just use more bytes to store the length. This would be very similar to the basic implementation shown above. However, back when C was first drafted, memory was limited. Using up additional memory to store the length of a string was very unattractive.
 
@@ -124,6 +124,6 @@ This allocates a null-terminated string with one billion bytes, and times both t
 - libc version: 2.39-0ubuntu8.5
 
 Results may vary on different hardware and environments.
-## Better Approach
-The issue with the naive approach is that we are iterating over the string
+## Faster Approach
+The issue with the naive approach is that we are iterating over the string byte by byte, and comparing each of them with $0$. This is bad for a few reasons:
 ## SIMD GO BRRRR

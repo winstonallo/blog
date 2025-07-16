@@ -1,8 +1,8 @@
 ---
 title: Deep-Dive Into strlen
 description: A deep dive into the `strlen` function from glibc
-date: 2024-07-27
-lastUpdated: 2024-07-28
+date: 2025-07-16
+lastUpdated: 2025-07-16
 tags:
     - System Programming
     - C

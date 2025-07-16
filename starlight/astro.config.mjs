@@ -2,14 +2,14 @@ import starlight from "@astrojs/starlight";
 import { astroExpressiveCode } from "@astrojs/starlight/expressive-code";
 import "@fontsource-variable/roboto-mono";
 import { defineConfig } from "astro/config";
+import rehypeMathJax from "rehype-mathjax";
+import remarkMath from "remark-math";
 import starlightBlog from "starlight-blog";
 import starlightCoolerCredit from "starlight-cooler-credit";
 import starlightImageZoom from "starlight-image-zoom";
 import starlightLinksValidator from "starlight-links-validator";
 
 import starlightThemeRapide from "./src/starlight-theme-rapide";
-import remarkMath from "remark-math";
-import rehypeMathJax from "rehype-mathjax";
 
 // https://astro.build/config
 export default defineConfig({
@@ -30,7 +30,7 @@ export default defineConfig({
       customCss: [
         "./src/styles/custom.css",
         "@fontsource-variable/roboto-mono/wght.css",
-        "./src/styles/mathjax.css"
+        "./src/styles/mathjax.css",
       ],
       social: [
         {
@@ -99,7 +99,7 @@ export default defineConfig({
               name: "Arthur Bied-Charreton",
               title: "winstonallo",
               url: "https://winstonallo.sh",
-              picture: "/ai.jpg",
+              picture: "/arthur.jpeg",
             },
           },
         }),

@@ -25,8 +25,8 @@
   ::backdrop {
     --sl-color-white: oklch(90% 0.002 219);
 
-    --sl-color-gray-1: oklch(0.3533 0.0173 260.87);
-    --sl-color-gray-2: oklch(75% 0.005 219);
+    --sl-color-gray-1: oklch(90% 0.002 219);
+    --sl-color-gray-2: oklch(85% 0.002 219);
     --sch-color-gray-3: oklch(65% 0.003 219);
     --sl-color-gray-4: oklch(48% 0.003 219);
     --sl-color-gray-5: oklch(0.3533 0.0173 260.87);
@@ -78,7 +78,7 @@
     --sl-color-accent: oklch(50% 0.085 var(--sl-hue-accent));
     --sl-color-accent-high: oklch(61% 0.085 var(--sl-hue-accent));
 
-    --sl-color-bg-inline-code: oklch(0.6267 0.2722 355.1);
+    --sl-color-bg-inline-code: oklch(0.3533 0.0173 260.87);
     --sl-color-bg-nav: var(--sl-color-gray-6);
     --sl-color-bg-sidebar: var(--sl-color-gray-6);
     --sl-color-backdrop-overlay: oklch(0.3533 0.0173 260.87);

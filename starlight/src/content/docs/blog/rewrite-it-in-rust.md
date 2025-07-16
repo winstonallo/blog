@@ -25,3 +25,8 @@ fn main() -> std::io::Result<()> {
         .collect::Result<Vec<_>, io::Error>()?;
 }
 ```
+## Test LateX support
+$X_i$
+$$
+|x,y| = \sqrt{x^2 + y^2}
+$$

@@ -33,25 +33,19 @@ struct String {
     bytes: Vec<u8>, // Vector of bytes to store the characters
     len: usize,     // Length of the string
 }
-
-impl String {
-    pub fn length(&self) -> usize {
-        self.len
-    }
-}
 ```
 ## What is a _C_ String?
-Text is nothing but an array of bytes. If you want to access text, simply store a pointer to its first byte, and start reading from there. The challenge arises when trying to figure out _how many_ bytes to read.
+C (among others) follows a more simplistic principle. Text is nothing but an array of bytes. If you want to access text, simply store the address of its first byte, and start reading from there. Simple, right?
 
-In the early days of Unix development, there were two popular solutions to this problem:
-1. Using a _leading byte_ to store the length of the string. This allowed the string to contain any data, but limited its length to 255 bytes. This is known as a _length-prefixed string_.
+However, the issues start arising when trying to figure out _how many_ bytes to read. In the early days of Unix development, there were two popular solutions to this problem:
+1. Using two _leading bytes_ to store the length of the string. This allowed the string to contain any data, but limited its length to 65536 bytes. This is known as a _length-prefixed string_, or _Pascal String_.
 2. Marking the end of the string with a null-byte (the value $0$). This poses no limitations on the length of the string, but reserves `\0` as a delimiter.
 
 A solution that immediately comes to mind would be to just use more bytes to store the length. This would be very similar to the basic implementation shown above. However, back when C was first drafted, memory was limited. Using up additional memory to store the length of a string was very unattractive.
 
 Dennis Ritchie, the man who designed C, went with the second approach, in order to avoid limiting and maintaining strings' lengths.
 
-This approach has many issues. Forgetting to allocate size for the null-byte, or forgetting to write it, will result in some nasty undefined behavior. Having a null-byte in the middle of a string will truncate it. This choice was famously referred to as the [most expensive one-byte mistake](https://queue.acm.org/detail.cfm?id=2010365) by Poul-Henning Kamp, a FreeBSD developer.
+This approach has many issues. Forget to allocate size for the null-byte, or forget to set it, and you will read out of bounds. Put a null-byte in the middle of a string, and it will be truncated. This choice was famously referred to as the [most expensive one-byte mistake](https://queue.acm.org/detail.cfm?id=2010365) by Poul-Henning Kamp, a FreeBSD developer.
 
 No matter how much it should not be the case, this is still a choice we must live with when coding in C. Let's have a look at the `strlen` algorithm, and _how we can make it go brrrr_.
 ## Definition of `strlen`
@@ -118,12 +112,16 @@ main() {
 ```
 This allocates a null-terminated string with one billion bytes, and times both the naive implementation and the `libc` version.
 
-- Compiler: Ubuntu clang version 18.1.3, x86_64-pc-linux-gnu, full optimization level (`-O3`)
-- Hardware: Virtualized AMD EPYC 9634 (1 allocated core, ~2.25 GHz)
-- OS: Ubuntu 24.04.2 LTS
-- libc version: 2.39-0ubuntu8.5
+* Compiler: Ubuntu clang version 18.1.3, x86_64-pc-linux-gnu
+* Compiler flags: `-O3 -fno-builtin`
+* Hardware: Virtualized AMD EPYC 9634 (1 allocated core, ~2.25 GHz)
+* OS: Ubuntu 24.04.2 LTS
+* libc version: 2.39-0ubuntu8.5
 
-Results may vary on different hardware and environments.
+Results will vary on different hardware and environments.
 ## Faster Approach
-The issue with the naive approach is that we are iterating over the string byte by byte, and comparing each of them with $0$. This is bad for a few reasons:
+The issue with this naive approach is that we are iterating over the string byte by byte, and comparing each of them with $0$. This is bad for a few reasons:
+* Reading one byte at a time does not take advantage of the CPU's word size (64-bit/8 bytes on modern systems)
+* Each memory access has overhead, fewer accesses with bigger chunks are more efficient
+* The CPU does not
 ## SIMD GO BRRRR

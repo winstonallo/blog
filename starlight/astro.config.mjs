@@ -99,7 +99,7 @@ export default defineConfig({
               name: "Arthur Bied-Charreton",
               title: "winstonallo",
               url: "https://winstonallo.sh",
-              picture: "/arthur.jpeg",
+              picture: "/arthur.png",
             },
           },
         }),
